@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "subscription-service-backend": {
+      "main": "src/subscription-service-backend/main.mo",
+      "type": "motoko"
+    },
+    "subscription-service-frontend": {
+      "dependencies": [
+        "subscription-service-backend"
+      ],
+      "source": [
+        "src/subscription-service-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "subscription-service-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
